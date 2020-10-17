@@ -1,12 +1,12 @@
-//find the min and max of five numbers
+// find the min and max of five numbers
 
 #include <iostream>
 using namespace std;
 
 //prototypes go here
 void display(int minimum, int maximum);
-void checkMax(int in, int m);
-void checkMin(int in, int m);
+void checkMax(int in, int& m);
+void checkMin(int in, int& m);
 
 
 int main()
@@ -43,7 +43,7 @@ int main()
 
 	display(min, max);
 
-		return 0;
+	return 0;
 }
 
 
@@ -52,7 +52,7 @@ int main()
 //check for a new min value
 //***************************
 
-void checkMin(int in, int m)
+void checkMin(int in, int& m)
 {
 	if (in < m)
 		m = in;
@@ -62,7 +62,7 @@ void checkMin(int in, int m)
 //check for a new maximum value
 //****************************
 
-void checkMax(int in, int m)
+void checkMax(int in, int& m)
 {
 	if (in > m)
 		m = in;
